@@ -8,7 +8,8 @@ function Button({name, color}){
             borderRadius : "6px ",
             fontSize: "14px",
             cursor: "pointer",
-            transition: "all 0.3s ease"
+            transition: "all 0.3s ease",
+            color: "white",
             
   
 

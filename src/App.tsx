@@ -1,10 +1,12 @@
 import Navbar from './assets/Components/Navbar';
+import HeroSection from './assets/Components/HeroSection';
 function App() {
   
   return (
     <>
       <Navbar />
-      <h1>HELLO WORLD</h1>
+      <HeroSection />
+      
     </>
   )
 }
