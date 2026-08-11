@@ -13,7 +13,6 @@ function FoodCard(){
                     <p>₹159</p>
                     <p>⭐️4.8</p>
                 </div>
-                
                 <Button name = "Add to Cart" color="green" />
             </div>
         </div>
