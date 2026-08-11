@@ -18,7 +18,7 @@ function Navbar(){
                     <li><a href = "About">About</a></li>
                     <li><a href = "Contact">Contact</a></li>
                     <li><Button name = "Login" color = "green"/></li>
-                    <li><Button name = "Get Started" color = "orange"/></li>
+                    <li><Button name = "Get Started" color = "#ff6b35"/></li>
             </ul>
             <div className="hamburger" onClick={()=>{showMenu(!isMenu)}}>☰</div>
             

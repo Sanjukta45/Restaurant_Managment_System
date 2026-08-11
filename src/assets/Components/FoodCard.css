@@ -1,0 +1,24 @@
+.foodCard{
+    height: 30%;
+    width: 20%;
+    overflow: hidden; 
+    border: 2px solid black;
+    
+}
+.foodImage{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.foodDescription{
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.priceSection{
+    display: flex;
+    justify-content: space-between;
+}
+
