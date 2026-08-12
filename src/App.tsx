@@ -1,7 +1,8 @@
 import Navbar from './assets/Components/Navbar';
 import HeroSection from './assets/Components/HeroSection';
 import MenuSection from './assets/Components/MenuSection';
-import FoodCard from './assets/Components/FoodCard';
+import Footer from './assets/Components/Footer';
+
 function App() {
   
   return (
@@ -9,7 +10,7 @@ function App() {
       <Navbar />
       <HeroSection />
       <MenuSection />
-      <FoodCard />
+      <Footer />
     </>
   )
 }

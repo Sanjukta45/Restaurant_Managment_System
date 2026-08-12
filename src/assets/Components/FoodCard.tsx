@@ -1,17 +1,16 @@
-import coffee from "../Images/cappuccino.jpg";
 import Button from "./Button";
 import './FoodCard.css'
 
-function FoodCard(){
+function FoodCard({food}){
     return(
         <div className="foodCard">
-            <img className="foodImage" src={coffee} alt="cappuccino image" />
+            <img className="foodImage" src={food.image} alt="cappuccino image" />
             <div className="foodDescription">
-                <h3>Cappuccino</h3>
-                <p>Classic espresso topped with steamed milk and creamy foam.</p>
+                <h3>{food.name}</h3>
+                <p>{food.description}</p>
                 <div className="priceSection">
-                    <p>₹159</p>
-                    <p>⭐️4.8</p>
+                    <p>₹{food.price}</p>
+                    <p>⭐️ {food.rating}</p>
                 </div>
                 <Button name = "Add to Cart" color="green" />
             </div>

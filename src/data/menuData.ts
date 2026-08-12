@@ -7,7 +7,7 @@ export const menuItems = [
     description: "Crispy chicken wings tossed in our special spicy sauce.",
     price: 299,
     rating: 4.8,
-    image: "/images/menu/chicken_wings.jpg",
+    image: "/food_image/chicken_wings.jpg",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ export const menuItems = [
     description: "Soft paneer cubes marinated with spices and grilled to perfection.",
     price: 249,
     rating: 4.7,
-    image: "/images/menu/paneer_tikka.jpg",
+    image: "/food_image/panner_tikka.jpg",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ export const menuItems = [
     description: "Crispy rolls stuffed with fresh vegetables and served with dip.",
     price: 199,
     rating: 4.5,
-    image: "/images/menu/spring_roll.jpg",
+    image: "/food_image/spring_roll.jpg",
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ export const menuItems = [
     description: "Freshly baked bread topped with garlic butter and herbs.",
     price: 149,
     rating: 4.6,
-    image: "/images/menu/garlic_bread.jpg",
+    image: "/food_image/garlic_bread.jpg",
   },
 
   // ---------------- MAIN COURSE ----------------
@@ -45,7 +45,7 @@ export const menuItems = [
     description: "Tender chicken cooked in a rich and creamy tomato gravy.",
     price: 399,
     rating: 4.9,
-    image: "/images/menu/butter_chicken.jpg",
+    image: "/food_image/butter_chicken.jpg",
   },
   {
     id: 6,
@@ -54,7 +54,7 @@ export const menuItems = [
     description: "Soft paneer cooked in a creamy tomato and butter gravy.",
     price: 349,
     rating: 4.8,
-    image: "/images/menu/paneer_butter_masala.jpg",
+    image: "/food_image/paneer_butter_masala.jpg",
   },
   {
     id: 7,
@@ -63,7 +63,7 @@ export const menuItems = [
     description: "Fragrant basmati rice cooked with vegetables and aromatic spices.",
     price: 299,
     rating: 4.6,
-    image: "/images/menu/veg_biryani.jpg",
+    image: "/food_image/veg_biryani.jpg",
   },
   {
     id: 8,
@@ -72,7 +72,7 @@ export const menuItems = [
     description: "Aromatic basmati rice layered with flavorful spiced chicken.",
     price: 399,
     rating: 4.9,
-    image: "/images/menu/chicken_biryani.jpg",
+    image: "/food_image/chicken_biryani.jpg",
   },
 
   // ---------------- DESSERTS ----------------
@@ -83,7 +83,7 @@ export const menuItems = [
     description: "Rich and fudgy chocolate brownie served warm.",
     price: 179,
     rating: 4.8,
-    image: "/images/menu/chocolate_brownie.jpg",
+    image: "/food_image/chocolate_brownie.jpg",
   },
   {
     id: 10,
@@ -92,7 +92,7 @@ export const menuItems = [
     description: "Creamy classic cheesecake with a buttery biscuit crust.",
     price: 229,
     rating: 4.9,
-    image: "/images/menu/cheese_cake.jpg",
+    image: "/food_image/cheese_cake.jpg",
   },
   {
     id: 11,
@@ -101,7 +101,7 @@ export const menuItems = [
     description: "Soft milk dumplings soaked in warm sugar syrup.",
     price: 129,
     rating: 4.7,
-    image: "/images/menu/gulab_jamun.jpg",
+    image: "/food_image/gulab_jamun.jpg",
   },
   {
     id: 12,
@@ -110,7 +110,7 @@ export const menuItems = [
     description: "Creamy vanilla ice cream topped with chocolate sauce and nuts.",
     price: 199,
     rating: 4.6,
-    image: "/images/menu/ice_cream_sundae.jpg",
+    image: "/food_image/ice_creame_sundae.jpg",
   },
 
   // ---------------- BEVERAGES ----------------
@@ -121,7 +121,7 @@ export const menuItems = [
     description: "Chilled creamy coffee blended with milk and ice.",
     price: 149,
     rating: 4.7,
-    image: "/images/menu/cold_coffee.jpg",
+    image: "/food_image/cold_coffee.jpg",
   },
   {
     id: 14,
@@ -130,7 +130,7 @@ export const menuItems = [
     description: "Refreshing lime drink with soda, mint and a touch of sweetness.",
     price: 99,
     rating: 4.5,
-    image: "/images/menu/lime_soda.jpg",
+    image: "/food_image/lime_soda.jpg",
   },
   {
     id: 15,
@@ -139,7 +139,7 @@ export const menuItems = [
     description: "Creamy smoothie made with fresh ripe mangoes.",
     price: 179,
     rating: 4.8,
-    image: "/images/menu/mango_smoothie.jpg",
+    image: "/food_image/mango_smoothie.jpg",
   },
   {
     id: 16,
@@ -148,6 +148,6 @@ export const menuItems = [
     description: "Classic espresso topped with steamed milk and creamy foam.",
     price: 159,
     rating: 4.7,
-    image: "/images/menu/cappuccino.jpg",
+    image: "/food_image/cappuccino.jpg",
   },
 ];

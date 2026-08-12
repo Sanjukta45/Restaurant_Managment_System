@@ -55,7 +55,11 @@
     width: 100%;
 }
 
-
+.menuItems{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
 
 @media (max-width: 768px) {
     .menu-section{
