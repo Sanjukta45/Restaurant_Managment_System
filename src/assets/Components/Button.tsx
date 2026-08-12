@@ -1,4 +1,4 @@
-function Button({name, color}){
+function Button({name, color, onClick}){
     return(
         <button 
          style={{padding : "8px", 
@@ -14,6 +14,7 @@ function Button({name, color}){
   
 
         }}
+        onClick={onClick}
          >{name}</button>
     )
 }

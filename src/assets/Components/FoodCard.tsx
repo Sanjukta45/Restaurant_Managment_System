@@ -1,7 +1,10 @@
+import { addToCart } from "../../redux/slices/cartSlice";
 import Button from "./Button";
 import './FoodCard.css'
+import { useDispatch } from "react-redux";
 
 function FoodCard({food}){
+    const dispatch = useDispatch();
     return(
         <div className="foodCard">
             <img className="foodImage" src={food.image} alt="cappuccino image" />
@@ -12,7 +15,7 @@ function FoodCard({food}){
                     <p>₹{food.price}</p>
                     <p>⭐️ {food.rating}</p>
                 </div>
-                <Button name = "Add to Cart" color="green" />
+                <Button onClick = {()=>{dispatch(addToCart(food))}} name = "Add to Cart" color="green" />
             </div>
         </div>
     )
