@@ -1,4 +1,16 @@
-export const menuItems = [
+export interface FoodItem {
+  id : number,
+  name : string,
+  category : string,
+  description : string,
+  price : number,
+  rating : number,
+  image : string
+}
+
+
+
+export const menuItems : FoodItem[] = [
   // ---------------- STARTERS ----------------
   {
     id: 1,
