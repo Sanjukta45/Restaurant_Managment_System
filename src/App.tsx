@@ -1,16 +1,15 @@
-import Navbar from './assets/Components/Navbar';
-import HeroSection from './assets/Components/HeroSection';
-import MenuSection from './assets/Components/MenuSection';
-import Footer from './assets/Components/Footer';
+import { Routes, Route } from "react-router-dom";
+import Home from "./assets/pages/Home";
+import Cart from "./assets/pages/Cart";
 
 function App() {
   
   return (
     <>
-      <Navbar />
-      <HeroSection />
-      <MenuSection />
-      <Footer />
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/cart" element={<Cart />} />
+  </Routes>
     </>
   )
 }

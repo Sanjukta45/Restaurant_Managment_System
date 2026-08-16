@@ -40,13 +40,15 @@
     list-style:none;
 }
 
-a{
+li{
     text-decoration:none;
     color:black;
 }
 
-a:hover{
+li:hover{
     color:red;
+    cursor:pointer;
+    
 }
 
 .hamburger{
