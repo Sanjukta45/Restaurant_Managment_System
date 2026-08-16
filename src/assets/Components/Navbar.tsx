@@ -1,7 +1,7 @@
 import {useState} from "react";
 import './Navbar.css';
 import Button from "./Button";
-import { useSelector, type UseSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 function Navbar(){
     const [isMenu, showMenu] = useState<boolean>(false);
@@ -21,15 +21,9 @@ function Navbar(){
                     <li><a href = "About">About</a></li>
                     <li><a href = "Contact">Contact</a></li>
                     <li><Button onClick={()=>{}} name = "Login" color = "green"/></li>
-<li className="cartItem">
-  <Button
-    onClick={() => {}}
-    name="Cart"
-    color="#ff6b35"
-  />
-
-  <span className="cartBadge">{totalItems}</span>
-</li>            </ul>
+            <li className="cartItem">
+            <Button onClick={() => {}} name="Cart" color="#ff6b35"/><span className="cartBadge">{totalItems}</span></li>            
+            </ul>
             <div className="hamburger" onClick={()=>{showMenu(!isMenu)}}>☰</div>
             
         </div>
