@@ -1,70 +1,261 @@
-.menuHeader{
+.menuHeader {
     width: 100%;
+
+    padding: 35px 20px 25px;
+
     text-align: center;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-bottom: 2px solid #ccc;
-    font-weight: bold;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    color: #222222;
+
+    font-family: "Montserrat", sans-serif;
+
     position: relative;
-    color: #ff6b35;
 }
 
-.menuCategories{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 10px 0;
-   
-}
-.menuCategoriesList{
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 20px;
+
+/* Main menu heading */
+
+.menuHeader h1 {
     margin: 0;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    color: #222222;
 }
+
+
+/* Optional subtitle */
+
+.menuHeader p {
+    margin-top: 8px;
+
+    font-size: 14px;
+
+    color: #777777;
+}
+
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.menuCategories {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 8px 20px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    position: sticky;
+    top: 72px;
+
+    z-index: 100;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+}
+
+.menuCategories::-webkit-scrollbar {
+    display: none;
+}
+
+
+.menuCategoriesList {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px;
+
+    margin: 0;
+
+    list-style: none;
+
+    white-space: nowrap;
+}
+
+
+/* Category item */
 
 .menuCategoriesList li {
     position: relative;
+
     padding: 10px 18px;
+
     cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
-    transition: all 0.3s ease;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #555555;
+
+    border-radius: 20px;
+
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        transform 0.25s ease;
 }
+
+
+/* Hover */
 
 .menuCategoriesList li:hover {
-    color: #ff6b35;
-    transform: translateY(-3px);
+    color: #198754;
+
+    background-color: #f0f8f3;
+
+    transform: translateY(-1px);
 }
+
+
+/* Remove old underline effect */
 
 .menuCategoriesList li::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 0;
-    height: 3px;
-    background: #ff6b35;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
+    display: none;
 }
 
-.menuCategoriesList li:hover::after {
+
+/* =========================
+   MENU ITEMS
+========================= */
+
+.menuItems {
     width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 35px 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(260px, 1fr)
+    );
+
+    gap: 25px;
+
+    align-items: start;
 }
 
-.menuItems{
-    display: flex;
-    justify-content: space-evenly;
-    
-}
+
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 768px) {
-    .menu-section{
-        position: absolute;
+
+    .menuHeader {
+        padding: 28px 15px 20px;
     }
-    
-    
+
+
+    .menuHeader h1 {
+        font-size: 26px;
+    }
+
+
+    .menuCategories {
+        top: 65px;
+
+        justify-content: flex-start;
+
+        padding: 6px 12px;
+    }
+
+
+    .menuCategoriesList {
+        gap: 5px;
+    }
+
+
+    .menuCategoriesList li {
+        padding: 9px 15px;
+
+        font-size: 13px;
+    }
+
+
+    .menuItems {
+        padding: 25px 18px;
+
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+        gap: 18px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .menuHeader {
+        padding: 25px 15px 18px;
+    }
+
+
+    .menuHeader h1 {
+        font-size: 24px;
+    }
+
+
+    .menuHeader p {
+        font-size: 13px;
+    }
+
+
+    .menuCategories {
+        top: 65px;
+
+        padding: 5px 10px;
+    }
+
+
+    .menuCategoriesList {
+        padding: 5px;
+        align-items: center;
+        gap: 4px;
+    }
+
+
+    .menuCategoriesList li {
+        padding: 8px 13px;
+
+        font-size: 12px;
+    }
+
+
+    .menuItems {
+       
+        display: grid;
+        grid-template-columns:  1fr;
+    }
 }

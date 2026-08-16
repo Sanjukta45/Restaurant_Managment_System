@@ -1,14 +1,14 @@
 import Navbar from '../Components/Navbar';
 import HeroSection from '../Components/HeroSection';
-import MenuSection from '../Components/MenuSection';
 import Footer from '../Components/Footer';
+import PopularItems from '../Components/PopularItems';
 
 function Home(){
     return (
         <>
             <Navbar />
             <HeroSection />
-            <MenuSection />
+            <PopularItems />
             <Footer />
         </>
     )

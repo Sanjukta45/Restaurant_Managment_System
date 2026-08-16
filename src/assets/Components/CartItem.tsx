@@ -1,8 +1,9 @@
+import { decreaseItem, increaseItem } from '../../redux/slices/cartSlice';
 import './CartItem.css';
-
+import { useDispatch } from 'react-redux';
 
 export default function CartItem({item}) {
-    
+    const dispatch = useDispatch();
     return (
         <div className="item-container">
 
@@ -17,8 +18,7 @@ export default function CartItem({item}) {
                     <h3>{item.name}</h3>
 
                     <p>
-                        A delicious cappuccino made with espresso
-                        and steamed milk.
+                        {item.description}
                     </p>
 
                     <span className="item-unit-price">
@@ -28,14 +28,14 @@ export default function CartItem({item}) {
             </div>
 
             <div className="item-quantity">
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
+                <button onClick={()=>dispatch(decreaseItem(item))}>-</button>
+                <span>{item.quantity}</span>
+                <button onClick={()=>dispatch(increaseItem(item))}>+</button>
             </div>
 
             <div className="item-price">
                 <span>Total</span>
-                <strong>₹{item.price}</strong>
+                <strong>₹{item.price * item.quantity}</strong>
             </div>
 
         </div>

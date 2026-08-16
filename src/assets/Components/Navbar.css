@@ -1,115 +1,321 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.navBar{
-    width:100%;
-    min-height:70px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background-color:rgb(163,163,85);
-    padding:0 20px;
-    /* position:relative; */
+.navBar {
+    width: 100%;
+    min-height: 72px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 5%;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+
+    font-family: "Inter", sans-serif;
+
     position: sticky;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
+    top: 0;
     z-index: 1000;
 }
 
-.logoPart{
-    display:flex;
-    align-items:center;
-    gap:20px;
+
+/* =========================
+   LOGO
+========================= */
+
+.logoPart {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    cursor: pointer;
 }
 
-.logoImg{
-    width:50px;
-    height:50px;
+.logoImg {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+
+    border-radius: 10px;
 }
 
-.listItems{
-    display:flex;
-    align-items:center;
-    gap:20px;
-    list-style:none;
+.logoPart h2 {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    color: #222222;
 }
 
-li{
-    text-decoration:none;
-    color:black;
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.listItems {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
+    list-style: none;
+
+    font-family: "Inter", sans-serif;
 }
 
-li:hover{
-    color:red;
-    cursor:pointer;
-    
+
+/* Individual navigation item */
+
+.listItems li {
+    position: relative;
+
+    color: #333333;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    padding: 26px 0;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
-.hamburger{
-    display:none;
-    font-size:30px;
-    cursor:pointer;
+
+/* Underline animation */
+
+.listItems li::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 18px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #198754;
+
+    border-radius: 2px;
+
+    transition: width 0.25s ease;
 }
+
+
+.listItems li:hover {
+    color: #198754;
+
+    transform: translateY(-1px);
+}
+
+
+.listItems li:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   CART
+========================= */
 
 .cartItem {
-  position: relative;
+    position: relative;
+
+    display: flex;
+    align-items: center;
 }
+
+
+/* Cart badge */
 
 .cartBadge {
-  position: absolute;
-  top: -8px;
-  right: -8px;
+    position: absolute;
 
-  background: #e63946;
-  color: white;
+    top: 15px;
+    right: -12px;
 
-  min-width: 20px;
-  height: 20px;
-  padding: 2px 6px;
+    min-width: 19px;
+    height: 19px;
 
-  border-radius: 50%;
-  font-size: 12px;
-  font-weight: bold;
+    padding: 0 5px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #198754;
+
+    color: #ffffff;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
-/* Mobile */
 
-@media (max-width:768px){
+/* =========================
+   HAMBURGER
+========================= */
 
-    .hamburger{
-        display:block;
+.hamburger {
+    display: none;
+
+    font-size: 28px;
+
+    color: #222222;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+.hamburger:hover {
+    color: #198754;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navBar {
+        min-height: 65px;
+
+        padding: 0 20px;
     }
 
-    .listItems{
-        position:absolute;
-        top:70px;
-        left:0;
-        width:100%;
-        background-color:rgb(163,163,85);
 
-        flex-direction:column;
-        align-items:center;
-        gap:20px;
-
-        max-height:0;
-        overflow:hidden;
-
-        transition:max-height .3s ease;
+    .logoImg {
+        width: 42px;
+        height: 42px;
     }
 
-    .listItems.active{
-        max-height:fit-content;
-        padding:20px 0;
+
+    .logoPart {
+        gap: 10px;
+    }
+
+
+    .logoPart h2 {
+        font-size: 18px;
+    }
+
+
+    .hamburger {
+        display: block;
+    }
+
+
+    .listItems {
+        position: absolute;
+
+        top: 65px;
+        left: 0;
+
+        width: 100%;
+
+        background-color: #ffffff;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 0;
+
+        max-height: 0;
+
+        overflow: hidden;
+
+        border-bottom: 1px solid #eeeeee;
+
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+
+        transition:
+            max-height 0.35s ease,
+            padding 0.35s ease;
+    }
+
+
+    .listItems.active {
+        max-height: 400px;
+
+        padding: 12px 0;
+    }
+
+
+    .listItems li {
+        width: 100%;
+
+        text-align: center;
+
+        padding: 14px 20px;
+
+        font-size: 14px;
+    }
+
+
+    .listItems li::after {
+        display: none;
+    }
+
+
+    .listItems li:hover {
+        background-color: #f5faf7;
+
+        transform: none;
+    }
+
+
+    .cartBadge {
+        top: 3px;
+        right: calc(50% - 8px);
     }
 }
 
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .navBar {
+        padding: 0 15px;
+    }
+
+
+    .logoImg {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .logoPart h2 {
+        font-size: 17px;
+    }
+}

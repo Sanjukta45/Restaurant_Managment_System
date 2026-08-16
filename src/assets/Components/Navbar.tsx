@@ -19,9 +19,8 @@ function Navbar(){
             
             <ul className={!isMenu ? "listItems" : "listItems active"}>
                     <li onClick={()=>{navigate("/")}}>Home</li>
-                    <li onClick={()=>{navigate("/")}}>Menu</li>
-                    <li onClick={()=>{navigate("/")}}>About</li>
-                    <li onClick={()=>{navigate("/")}}>Contact</li>
+                    <li onClick={()=>{navigate("/menu")}}>Menu</li>
+                    <li onClick={()=>{navigate("/about")}}>About</li>
                     <li><Button onClick={()=>{}} name = "Login" color = "green"/></li>
             <li className="cartItem">
             <Button onClick={() => {navigate("/cart")}} name="Cart" color="#ff6b35"/><span className="cartBadge">{totalItems}</span></li>            
